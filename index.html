@@ -8,31 +8,37 @@
   <link rel="stylesheet" type="text/css" media="screen" href="./styles.css">
   <title>Formulario</title>
 </head>
-<body>
+<body style="display: grid; justify-content: center;">
   <h1>Bienvenidos a mi fiesta</h1>
   <h2>Por favor, confirmar asistencia:</h2>
 
   <form id="formulario"> <!-- de clase a id  --> 
-    <label for="name">Nombre</label> <!--mejoramos experiencia de usuario al agregar labels
-    especialmetne a las personas que les cuesta mover el mouse  con la propiedad for apropiada-->
-     <input type="text" name="name" id="name" required> <!-- Indicamos que todas las entradas de blog son obligatorias-->
-    <br />
-     <!--mejoramos experiencia de usuario al agregar labels
-    especialmetne a las personas que les cuesta mover el mouse  con la propiedad for apropiada-->
-    <label for="age"> Edad</label>
-     <input type="number" name="age" id="age" required>
-    <br />
+    <div>
+      <label for="name">Nombre</label> <!--mejoramos experiencia de usuario al agregar labels
+      especialmetne a las personas que les cuesta mover el mouse  con la propiedad for apropiada-->
+       <input type="text" name="name" id="name" required> <!-- Indicamos que todas las entradas de blog son obligatorias-->
+    </div>
+    <div>
 
-    <label for="age"> Nacionalidad</label>
-    <select name="nationality" id="nationality" required>
+      <!--mejoramos experiencia de usuario al agregar labels
+     especialmetne a las personas que les cuesta mover el mouse  con la propiedad for apropiada-->
+     <label for="age"> Edad</label>
+      <input type="number" name="age" id="age" required>
+    </div>
+    
+    <div>
       
-      <option selected value="" disabled>------</option>
-      <option value="ar">Argentina</option>
-      <option value="mx">Mexicana</option>
-      <option value="per">Peruana</option>
-      <option value="vnzl">Venezolana</option>
-    </select>
-    <br />
+      <label for="age"> Nacionalidad</label>
+      <select name="nationality" id="nationality" required>
+        
+        <option selected value="" disabled>------</option>
+        <option value="ar">Argentina</option>
+        <option value="mx">Mexicana</option>
+        <option value="per">Peruana</option>
+        <option value="vnzl">Venezolana</option>
+      </select>
+    </div>
+    
   
     <button type="submit">Enviar</button>
   </form>
