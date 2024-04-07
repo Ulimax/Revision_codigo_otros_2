@@ -1,5 +1,4 @@
 var formulario = document.querySelector("#formulario")
-
 formulario.onsubmit = function(e) {
       // DE prevent a preventDefault
       e.preventDefault();
@@ -16,16 +15,24 @@ formulario.onsubmit = function(e) {
       console.log(nombre, edad)
       console.log(nacionalidad)
 
+      name.classList.remove("error") 
+      age.classList.remove("error")
+      nationality.classList.remove("error")
+      var regName = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
 
-
-      if (nombre.length === 0) {
-        nationality.classList.add("error") // cambiamos a los nuevos nombres de variables
+      if (!regName.test(nombre.trim())) { // Modificamos para que no acepte espacios
+        name.classList.add("error") // cambiamos a los nuevos nombres de variables
       }
       if (edad < 18 || edad > 120) {
         age.classList.add("error") // cambiamos a los nuevos nombres de variables
       }
+      if(nacionalidad === ""){
+        nationality.classList.add("error")
+      }
+
+   
     // Mejoramos la legilibilidad de la sentencia if
-    if (nombre.length > 0 && (edad > 18  && edad < 120) ) {
+    if (regName.test(nombre.trim()) && nombre.trim().length > 0 && (edad > 18  && edad < 120 && nacionalidad !=0) ) {
       agregarInvitado(nombre, edad, nacionalidad)
       }
 }
@@ -39,7 +46,7 @@ formulario.onsubmit = function(e) {
 // document.body.appendChild(botonBorrar);
 
 function agregarInvitado(nombre, edad, nacionalidad) {
-
+  
   if (nacionalidad === "ar") {
     nacionalidad = "Argentina"
   }
@@ -73,10 +80,11 @@ lista.appendChild(elementoLista)
 
 function crearElemento(descripcion, valor) {
 var spanNombre = document.createElement("span")
-var inputNombre = document.createElement("input")
+var inputNombre = document.createElement("p")
 var espacio = document.createElement("br")
 spanNombre.textContent = descripcion + ": "
-inputNombre.value = valor 
+inputNombre.innerText = valor 
+inputNombre.style.display = "inline";
 elementoLista.appendChild(spanNombre)
 elementoLista.appendChild(inputNombre)
 elementoLista.appendChild(espacio)
