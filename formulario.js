@@ -19,7 +19,7 @@ formulario.onsubmit = function(e) {
       age.classList.remove("error")
       nationality.classList.remove("error")
       var regName = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
-      // Nombre solo admite caracteres numericos al agregar un test con un regex
+      // Nombre solo admite caracteres alfabeticos al agregar un test con un regex
       if (!regName.test(nombre.trim())) { // Modificamos para que no acepte espacios
         name.classList.add("error") // cambiamos a los nuevos nombres de variables
       }

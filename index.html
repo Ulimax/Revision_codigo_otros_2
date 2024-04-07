@@ -15,16 +15,16 @@
   <form id="formulario"> <!-- de clase a id  --> 
     <label for="name">Nombre</label> <!--mejoramos experiencia de usuario al agregar labels
     especialmetne a las personas que les cuesta mover el mouse  con la propiedad for apropiada-->
-     <input type="text" name="name" id="name">
+     <input type="text" name="name" id="name" required> <!-- Indicamos que todas las entradas de blog son obligatorias-->
     <br />
      <!--mejoramos experiencia de usuario al agregar labels
     especialmetne a las personas que les cuesta mover el mouse  con la propiedad for apropiada-->
     <label for="age"> Edad</label>
-     <input type="number" name="age" id="age">
+     <input type="number" name="age" id="age" required>
     <br />
 
     <label for="age"> Nacionalidad</label>
-    <select name="nationality" id="nationality">
+    <select name="nationality" id="nationality" required>
       
       <option selected value="" disabled>------</option>
       <option value="ar">Argentina</option>
