@@ -59,7 +59,9 @@ var elementoLista = document.createElement("div")
 elementoLista.classList.add("elemento-lista")
 lista.appendChild(elementoLista)
 
-/** Evitamos que se cree un segun nombre */
+/** Evitamos que se cree un segundo  nombre  en la lista
+ * Lo que esta comentado abajo no debe de ir en el codigo
+*/
 // var spanNombre = document.createElement("span")
 // var inputNombre = document.createElement("input")
 // var espacio = document.createElement("br")

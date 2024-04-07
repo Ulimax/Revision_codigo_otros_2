@@ -13,9 +13,14 @@
   <h2>Por favor, confirmar asistencia:</h2>
 
   <form id="formulario"> <!-- de clase a id  --> 
-    Nombre <input type="text" name="name" id="name">
+    <label for="name">Nombre</label> <!--mejoramos experiencia de usuario al agregar labels
+    especialmetne a las personas que les cuesta mover el mouse  con la propiedad for apropiada-->
+     <input type="text" name="name" id="name">
     <br />
-    Edad <input type="number" name="age" id="age">
+     <!--mejoramos experiencia de usuario al agregar labels
+    especialmetne a las personas que les cuesta mover el mouse  con la propiedad for apropiada-->
+    <label for="age"> Edad</label>
+     <input type="number" name="age" id="age">
     <br />
 
     Nacionalidad
@@ -26,7 +31,8 @@
       <option value="vnzl">Venezolana</option>
     </select>
     <br />
-    <input type="submit">
+  
+    <button type="submit">Enviar</button>
   </form>
 
   <div id="lista-de-invitados">
